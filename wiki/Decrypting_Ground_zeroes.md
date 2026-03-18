@@ -4,7 +4,7 @@ permalink: /Decrypt_GZ_EXE/
 tags: [EXE, Guides, GZ]
 ---
 
-For the PC release of Ground Zeroes on , Konami decided to implement steam DRM, which encrypts part of the game's executable. Fortunately for us, we can use tools to decrypt the exe for ghidra research and disable the anti-debugger detection. While this may not be as straight forward as downloading an exe from steam, the steps are pretty simple.
+For the PC release of Ground Zeroes on PC, Konami decided to implement steam DRM, which encrypts part of the game's executable. Fortunately for us, we can use tools to decrypt the exe for ghidra research and disable the anti-debugger detection. While this may not be as straight forward as downloading an exe from steam, the steps are pretty simple.
 
 Head to the github page for steamless, a drm removal tool (note this does not allow for piracy, just the decryption of the exe) and download the latest version. for ease of guide, I have linked it here(https://github.com/atom0s/Steamless)
 
