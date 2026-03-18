@@ -8,7 +8,7 @@ For the PC release of Ground Zeroes on PC, Konami decided to implement steam DRM
 
 Head to the github page for steamless, a drm removal tool (note this does not allow for piracy, just the decryption of the exe) and download the latest version. for ease of guide, I have linked it here(https://github.com/atom0s/Steamless)
 
-I will use the the gui version, 'steamless.exe' since I think it's the easiest way to demonstrate what to do. Once you launch the exe, point the file path to your GZ instal directory, then please select the following options to ensure you receive a functioning exe. 
+I will use the the gui version, 'steamless.exe' since I think it's the easiest way to demonstrate what to do. Once you launch the exe, point the file path to your GZ install directory, then please select the following options to ensure you receive a functioning exe. 
 * Keep Bind Section
 *  Don't Realign Sections
 *  Zero DOS Stub Data
