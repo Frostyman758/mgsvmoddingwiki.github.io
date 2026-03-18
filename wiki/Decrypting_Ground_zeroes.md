@@ -16,6 +16,6 @@ I will use the the gui version, 'steamless.exe' since I think it's the easiest w
 
 Now click unpack, the tool should output a fully decrypted exe which both runs and can be imported into Ghidra for research purposes. Test the exe, make sure it runs. 
 
-The next steps after this for is to remove the the parent/child process setup and remove the remainder of the anti-debugger detection, but for just browsing in Ghidra this should work. 
+The next steps after this is to remove the the parent/child process setup and remove the remainder of the anti-debugger detection, but for just browsing in Ghidra this should be fine. 
 
 
