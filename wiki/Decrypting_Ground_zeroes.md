@@ -3,19 +3,26 @@ title: Decrypting Ground Zeroes Executable
 permalink: /Decrypt_GZ_EXE/
 tags: [EXE, Guides, GZ]
 ---
+## Background
+For the PC release of Ground Zeroes, Valve's SteamStub DRM encrypts part of the game's executable on disk. This can be reversed using Steamless, an open-source unpacking tool, to produce a fully functional decrypted executable usable for Ghidra analysis and debugging. The setup is pretty simple, head
+  over to the [Steamless](https://github.com/atom0s/Steamless) Github page and extract the latest release. For this guide, I will use the gui-based version of steamless. 
 
-For the PC release of Ground Zeroes on PC, Konami decided to implement steam DRM, which encrypts part of the game's executable. Fortunately for us, we can use tools to decrypt the exe for ghidra research and disable the anti-debugger detection. While this may not be as straight forward as downloading an exe from steam, the steps are pretty simple.
+## Steps
 
-Head to the github page for steamless, a drm removal tool (note this does not allow for piracy, just the decryption of the exe) and download the latest version. for ease of guide, I have linked it here(https://github.com/atom0s/Steamless)
+1. Launch `Steamless.exe` and point the file path to your Ground Zeroes install directory, selecting `MgsGroundZeroes.exe`.
 
-I will use the the gui version, 'steamless.exe' since I think it's the easiest way to demonstrate what to do. Once you launch the exe, point the file path to your GZ install directory, then please select the following options to ensure you receive a functioning exe. 
-* Keep Bind Section
-*  Don't Realign Sections
-*  Zero DOS Stub Data
-* Dump SteamDRMP.dll To Disk
+2. Select the following options:
 
-Now click unpack, the tool should output a fully decrypted exe which both runs and can be imported into Ghidra for research purposes. Test the exe, make sure it runs. 
+   -  Keep Bind Section
+   -  Don't Realign Sections
+   -  Zero DOS Stub Data
+   -  Dump SteamDRMP.dll To Disk
 
-The next steps after this is to remove the the parent/child process setup and remove the remainder of the anti-debugger detection, but for just browsing in Ghidra this should be fine. 
+3. Click **Unpack**. Steamless will output a decrypted executable in the same directory.
+
+4. Test the output executable, should run perfectly fine afterwards. 
+## Photo of correct options in the gui
 
 
+## 
+With a working decrypted executable, the next steps are removing the remaining anti-debugger detection and decoupling the parent/child process relationship that the game normally establishes. That being said, for Ghidra research, this is all that is required. 
